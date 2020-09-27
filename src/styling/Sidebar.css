@@ -40,3 +40,8 @@
     margin-left: 10px;
     outline-width: 0;
 }
+.sidebar-chats {
+    flex: 1;
+    background-color: white;
+    overflow: scroll;
+}

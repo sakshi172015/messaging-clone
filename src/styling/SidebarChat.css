@@ -1,6 +1,27 @@
 .sidebar-chat {
     display: flex;
-    padding: 20px;
+    padding: 10px 0 10px 10px;
     cursor: pointer;
     border-bottom: 1px solid #f6f6f6;
+}
+.sidebar-chat :hover {
+    background-color: #ebebeb;
+}
+.sidebar-chat-info {
+    height: 45px;
+    margin-left: 10px;
+    align-content: center;
+    margin-right: 10px;
+}
+.sidebar-chat-info :nth-child(1) {
+    margin-top: 0px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.sidebar-chat-info :nth-child(2) {
+    margin-bottom: -30px;
+    margin-top: -13px;
+    font-weight: 200;
+    font-size: 12px;
+    overflow: hidden;
 }
