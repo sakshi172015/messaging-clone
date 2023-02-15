@@ -1,0 +1,14 @@
+.side-bar-container {
+    flex: 7;
+    width: 100%;
+    background-color: red;
+}
+.side-bar-top-bar {
+    height: 8vh;
+}
+.side-bar-profile-pic {
+    width: 5vh;
+    height: 5vh;
+    border-radius: 2.5vh;
+    background-color: blue;
+}
