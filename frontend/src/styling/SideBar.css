@@ -4,11 +4,49 @@
     background-color: red;
 }
 .side-bar-top-bar {
-    height: 8vh;
+    height: 50px;
+}
+.search-sub-container {
+    border-radius: 7px;
+    width: 100%;
+    height: 100%;
 }
 .side-bar-profile-pic {
-    width: 5vh;
-    height: 5vh;
-    border-radius: 2.5vh;
-    background-color: blue;
+    width: 35px;
+    height: 35px;
+    border-radius: 17.5px;
+}
+.search-container {
+    width: 100%;
+    height: 50px;
+}
+.search-box {
+    border-radius: 7px;
+    width: 15%;
+}
+.input-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    font-size: 13px;
+    box-sizing: border-box;
+    border: none;
+}
+.archive-sub-container {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 5px;
+}
+.archive {
+    color: white;
+    font-size: 15px;
+}
+.chats {
+    overflow: scroll;
+    height: 75vh;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+}
+.side-bar-chats::-webkit-scrollbar {
+    display: none;
 }
