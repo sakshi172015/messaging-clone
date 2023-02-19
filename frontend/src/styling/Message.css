@@ -1,0 +1,53 @@
+.triangle-element-received, .triangle-element-sent {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+    margin: 10px;
+}
+.triangle-element-received:after, .triangle-element-sent:after {
+    content: '';
+    background: #1F2C34;
+    width: 142%;
+    height: 142%;
+    position: absolute;
+    transform: rotate(135deg) translate(-71%,0);
+}
+.triangle-element-received:after {
+    transform: rotate(135deg) translate(-71%,0);
+}
+.triangle-element-sent:after {
+    transform: rotate(45deg) translate(-71%,0);
+    background-color: #005D4B;
+}
+.rectangle-element-received, .rectangle-element-sent {
+    min-height: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: #1F2C34;
+    color: antiquewhite;
+    font-size: 14px;
+    margin-top: 10px;
+    align-items: center;
+    display: flex;
+    max-width: 80%;
+    padding-left: 10px;
+}
+.rectangle-element-received {
+    border-top-right-radius: 5px;
+    margin-left: -10px;
+}
+.rectangle-element-sent {
+    margin-right: -10px;
+    border-top-left-radius: 5px;
+    background-color: #005D4B;
+}
+.time-stamp {
+    font-size: 10px;
+    right: 0;
+    display: flex;
+    margin-bottom: -5px;
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-left: 5px;
+}

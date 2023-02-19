@@ -4,7 +4,7 @@
     background-color: red;
 }
 .side-bar-top-bar {
-    height: 50px;
+    height: 55px;
 }
 .search-sub-container {
     border-radius: 7px;
@@ -47,6 +47,6 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;
 }
-.side-bar-chats::-webkit-scrollbar {
+.chats::-webkit-scrollbar {
     display: none;
 }
