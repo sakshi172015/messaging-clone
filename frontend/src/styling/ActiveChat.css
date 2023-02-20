@@ -1,0 +1,21 @@
+.active-chat-container {
+    background-image: url('https://th.bing.com/th/id/OIP.H3Gr3JbIKmJzKJng9GS5kwHaJ9?pid=ImgDet&rs=1');
+    background-color: black;
+}
+.top-bar {
+    height: 55px;
+}
+.bottom-bar {
+    height: 60px;
+    align-items: center;
+    width: 100%;
+}
+.send-input-box {
+    width: 100%;
+    height: 70%;
+    border-radius: 9px;
+    font-size: 15px;
+    box-sizing: border-box;
+    border: none;
+    color: white;
+}
