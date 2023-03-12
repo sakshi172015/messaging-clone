@@ -13,7 +13,7 @@ const userSchema = new Schema({
     statusId: {
         type: String
     },
-    phoneNumber: {
+    email: {
         type: String,
         required: true
     },
@@ -22,6 +22,10 @@ const userSchema = new Schema({
     },
     about: {
         type: String
+    },
+    phoneNumber: {
+        type: String,
+        required: true
     }
 })
 
