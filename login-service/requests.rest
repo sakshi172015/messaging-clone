@@ -2,11 +2,12 @@
 
 # POST http://localhost:5000/api/user/signup
 # content-type: application/json
+
 # {
-#     "email": "sakshi.172015@gmail.com",
+#     "email": "sakshi.jain.172015@gmail.com",
 #     "fullName": "Sakshi",
 #     "about": "hello there",
-#     "phoneNumber": "9650625937"
+#     "phoneNumber": "9990516988"
 # }
 
 # POST http://localhost:5000/api/user/login
@@ -21,4 +22,3 @@
 # {
 #     "email": "sakshi.172015@gmail.com"
 # }
-

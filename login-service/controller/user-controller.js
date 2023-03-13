@@ -40,7 +40,7 @@ export const signup = async(req, res, next) => {
             }
         )
     }
-    if(!fullName && !email && !about && !phoneNumber) {
+    if(!fullName || !email || !about || !phoneNumber) {
         return res.status(400).json({
             message: "Incorrect or no body passed",
             data: null

@@ -1,0 +1,19 @@
+# GET http://localhost:6000/api/message/
+
+
+# POST http://localhost:6000/api/message/
+# content-type: application/json
+
+# {
+#     "content": "How you doing?",
+#     "to": "640ddf249eac9e1c046de956",
+#     "from": "640eaeb4b62e1470233bf305"
+# }
+
+# GEt http://localhost:6000/api/message/userMessages
+# content-type: application/json
+
+# {
+#     "to": "640ddf249eac9e1c046de956",
+#     "from": "640eaeb4b62e1470233bf305"
+# }
