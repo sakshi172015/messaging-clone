@@ -1,0 +1,24 @@
+# GET http://localhost:5000/api/user
+
+# POST http://localhost:5000/api/user/signup
+# content-type: application/json
+
+# {
+#     "email": "sakshi.jain.172015@gmail.com",
+#     "fullName": "Sakshi",
+#     "about": "hello there",
+#     "phoneNumber": "9990516988"
+# }
+
+# POST http://localhost:5000/api/user/login
+# content-type: application/json
+# {
+#     "email": "sakshi.172015@gmail.com",
+#     "phoneNumber": "9650625937"
+# }
+
+# POST http://localhost:5000/api/user/sendOtp
+# content-type: application/json
+# {
+#     "email": "sakshi.172015@gmail.com"
+# }
