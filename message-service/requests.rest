@@ -1,7 +1,6 @@
-# GET http://localhost:6000/api/message/
+# GET http://localhost:9000/api/message/
 
-
-# POST http://localhost:6000/api/message/
+# POST http://localhost:9000/api/message/
 # content-type: application/json
 
 # {
@@ -10,7 +9,7 @@
 #     "from": "640eaeb4b62e1470233bf305"
 # }
 
-# GEt http://localhost:6000/api/message/userMessages
+# GEt http://localhost:9000/api/message/userMessages
 # content-type: application/json
 
 # {
