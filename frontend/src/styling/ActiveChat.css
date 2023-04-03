@@ -18,4 +18,5 @@
     box-sizing: border-box;
     border: none;
     color: white;
+    justify-content: center;
 }

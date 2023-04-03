@@ -50,10 +50,15 @@ export const postMessage = async(req, res, next) => {
 }
 
 export const getUserMessages = async(req, res, next) => {
-    const { to, from} = req.body
+    // console.log(req.query.to)
+    const { to, from} = req.query
     let messages = []
     try {
-        messages = await Message.find({to: to, from: from}).sort({time: -1})
+        messages = await Message.find().or([
+            { to: to, from: from},
+            { to: from, from : to}
+        ]).sort({time: 1})
+        // messages = await Message.find({to: to, from: from}).sort({time: -1})
     } catch(err) {
         return res.status(400).json({
             message: "Error occurred",
