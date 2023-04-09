@@ -1,0 +1,40 @@
+.login-container {
+    width: 100vw;
+}
+
+.login-sub {
+    width: 100vw;
+    height: 30vh;
+    position: absolute;
+    z-index: -1;
+}
+
+.login-submain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-test {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    width: 70vw;
+    background-color: white;
+    margin-bottom: 100px;
+}
+.login-send-otp {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    color: white;
+}
+.login-header {
+    font-size: 30px;
+    font-weight: lighter;
+}
+.login-subheader {
+    font-size: 18px;
+    line-height: 250%;
+}
+
+.login-footer:hover {
+    background-color: aquamarine;
+}
