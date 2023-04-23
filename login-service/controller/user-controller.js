@@ -92,42 +92,51 @@ export const login = async(req, res, next) => {
 }
 
 export const sendOtp = async(req, res, next) => {
-    const {email} = req.body
-    const OTP = generateOtp()
-
+    const {email, otp} = req.body
     const transporter = nodemailer.createTransport({
         service: 'hotmail',
         auth: {
-            user: process.env.OUTLOOK_EMAIL,
-            pass: process.env.OUTLOOK_PASSWORD
+            user: 'messaging.clone@outlook.com',
+            pass: 'Messaging@clone'
         }
-    });
-    const mailOptions = {
-        from: "sakshi.172015@outlook.com",
+    })
+    const options = {
+        from: "messaging.clone@outlook.com",
         to: email,
-        subject: "Verification",
-        text: `Your otp is ${OTP}`
+        subject: "Verification ",
+        text: "Your code is " + otp
     }
-    transporter.sendMail(mailOptions, function(err, info) {
+    transporter.sendMail(options, function(err, info) {
         if(err) {
             return res.status(400).json({
-                message: "Some error occurred",
-                data: null
-            })
-        } else {
-            return res.status(200).json({
-                message: "sent",
-                data: OTP
+                data: err
             })
         }
+        return res.status(200).json({
+            data: info.response
+        })
     })
 }
 
-const generateOtp = () => {
-    let digits = '0123456789';
-    let OTP = '';
-    for (let i = 0; i < 4; i++ ) {
-        OTP += digits[Math.floor(Math.random() * 10)];
+export const checkIfUserAlreadyExists = async(req, res, next) => {
+    const {email, phoneNumber} = req.query
+    let existingUser;
+    try {
+        existingUser = await User.findOne({phoneNumber})
+    } catch(err) {
+        return res.status(400).json({
+            message: "Some error occurred",
+            data: err
+        })
     }
-    return OTP;
-} 
+    if(existingUser) {
+        return res.status(200).json({
+            message: "User already exists",
+            data: existingUser
+        })
+    }
+    return res.status(200).json({
+        message: "No such user exists",
+        data: null
+    })
+}

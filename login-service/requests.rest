@@ -20,5 +20,9 @@
 # POST http://localhost:5000/api/user/sendOtp
 # content-type: application/json
 # {
-#     "email": "sakshi.172015@gmail.com"
+#     "email": "sakshi.172015@gmail.com",
+#     "otp": 12345       
 # }
+
+# GET http://localhost:5000/api/user/checkIfUserAlreadyExists?email=sakshi.172015@gmail.com&phoneNumber=9650625937
+# content-type: application/json

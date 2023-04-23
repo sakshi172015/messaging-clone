@@ -1,13 +1,24 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import '../styling/login.css'
 import colors from '../components/colors'
 import { TextField } from '@mui/material'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import SettingsIcon from '@mui/icons-material/Settings';
+import { getAllUsers } from '../api/login'
+
 
 export default function Login() {
 	const [email, setEmail] = useState('')
+	const [phoneNumber, setPhoneNumber] = useState('')
+	useEffect(() => {
+		getData()
+	}, [])
+	const getData = async() => {
+		// let res = await getAllUsers()
+		// console.log('res ', {res})
+	}
+	
   	return (
     	<div className='login-container'>
 			<div className='login-sub' style={{backgroundColor: colors.green}} />
@@ -38,6 +49,14 @@ export default function Login() {
 								onChange={(e) => setEmail(e.target.value)}
 								value={email}
 								placeholder='Enter your email'
+							/>
+							<TextField id="outlined-basic" 
+								label="Phone Number" 
+								variant="outlined"
+								style={{width: '20vw', marginTop: 20}}
+								onChange={(e) => setPhoneNumber(e.target.value)}
+								value={phoneNumber}
+								placeholder='Enter your phone number'
 							/>
 							<div className='login-send-otp' style={{backgroundColor: colors.green}}>Send Otp</div>
 						</div>
